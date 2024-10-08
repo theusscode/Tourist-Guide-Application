@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <title>Menu Transparente com Mapa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="#"><i class="bi bi-globe-americas"></i></a>
+
+                <nav>
+                    <ul>
+                        
+                        <nav class="menu">
+                            <ul>
+
+                              <li><a href="#">HOME</a></li>
+
+                              <li><a href="#">RESTAURANTES</a>
+                                <ul class="submenu">
+                                  <li><a href="#">Italianos</a></li>
+                                  <li><a href="#">Franceses</a></li>
+                                  <li><a href="#">Comida Típica</a></li>
+                                  <li><a href="#">Fast Food</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#">DESTAQUES</a>
+                                <ul class="submenu">
+                                  <li><a href="3">Eventos Locais</a></li>
+                                  <li><a href="#">Atrações Culturais</a></li>
+                                  <li><a href="#">Praias</a></li>
+                                  <li><a href="#">Passeios de Barco</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#">HOSPEDAGEMS</a>
+                                <ul class="submenu">
+                                  <li><a href="#">Hotéis</a></li>
+                                  <li><a href="#">Hostels</a></li>
+                                  <li><a href="#">Pousadas</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#">GUIA DO VIAJANTE</a>
+                                <ul class="submenu">
+                                  <li><a href="#">Transporte</a></li>
+                                  <li><a href="#">Dicas de Segurança</a></li>
+                                  <li><a href="#">Clima</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </nav>
+                          
+                    </ul>
+                </nav>
+
+                <div class="btn-contato">
+                    <a href="#"><button>CONTATO</button></a>
+                </div>
+            </div><!-- flex -->
+        </div><!-- container -->
+    </header>
+
+    <section class="banner">
+        <h1>DESCUBRA UM <span>NOVO MUNDO</span></h1>
+    </section>
+
+    <!-- Campo de busca com filtro -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Digite o local que deseja buscar..." />
+        <button id="search-btn">Buscar</button>
+        <select id="filter">
+            <option value="">Selecione um filtro</option>
+            <option value="museus">museus</option>
+            <option value="bares">bares</option>
+            <option value="restaurantes">Restaurantes</option>
+            <option value="hotéis">Hotéis</option>
+            <option value="atrações">Atrações</option>
+        </select>
+    </div>
+
+    
+
+    <!-- Div para o mapa -->
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+    <div id="eventos-locais">
+        <h2>Eventos Locais em Santarém</h2>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="imagens/eventos-locais.jpeg" alt="Evento Local em Santarém" />
+            </div>
+            <div class="text-container">
+                <p>
+                    Santarém é rica em cultura e tradição, oferecendo uma variedade de eventos locais que refletem a diversidade e a vitalidade da região amazônica. Durante o ano, a cidade abriga festas populares, como a Festa de São João, que conta com apresentações de danças folclóricas, comidas típicas e celebrações religiosas.
+                </p>
+                <p>
+                    Além disso, o Festival de Verão de Santarém reúne artistas locais e nacionais, proporcionando shows de música, dança e teatro. As festividades são uma ótima oportunidade para conhecer a cultura local e interagir com os moradores, que são sempre acolhedores e felizes em compartilhar suas tradições.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="atracoes-culturais">
+        <h2>Atrações Culturais</h2>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="imagens/atracoes-culturai.jpg" alt="Atrações Culturais de Santarém" style="width:100%; height:auto;">
+            </div>
+            <div class="text-container">
+                <p>
+                    Santarém é rica em cultura e tradições que refletem a diversidade do povo amazônico. 
+                    A cidade abriga importantes eventos culturais, como o Festival de Verão, que celebra a 
+                    música e a dança, além de exposições de arte que destacam a obra de artistas locais. 
+                    Entre as principais atrações culturais estão o Museu João Fona, que apresenta a história 
+                    da região, e a Igreja de São Sebastião, um ícone arquitetônico com rica decoração em estilo 
+                    barroco. Não deixe de visitar a feira de artesanato, onde você pode encontrar produtos 
+                    únicos feitos por artesãos locais.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="praias">
+        <h2>Praias</h2>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="imagens/alter-do-chao.jpeg" alt="Praia de Alter do Chão" style="max-width: 100%; height: auto; border-radius: 10px;">
+            </div>
+            <div class="text-container">
+                <p>
+                    As praias de Santarém são conhecidas por sua beleza natural e suas águas cristalinas. 
+                    Entre as mais populares, estão a Praia de Alter do Chão e a Praia do Pindobal. 
+                    Esses locais oferecem atividades como banhos, passeios de barco, e muito mais. 
+                    Venha aproveitar um dia de sol e relaxamento em um dos nossos paraísos tropicais!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="passeios-barco">
+        <h2>Passeios de Barco na Amazônia em Santarém</h2>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="imagens/passeio-de-barco.jpg" alt="Passeio de Barco na Amazônia" style="width:100%; height:auto;">
+            </div>
+            <div class="text-container">
+                <p>
+                    Explore a imensidão das águas da Amazônia em Santarém, onde o encontro entre os rios Tapajós e Amazonas oferece paisagens únicas e uma experiência inigualável de contato com a natureza. Os passeios de barco na região proporcionam uma oportunidade incrível de conhecer praias fluviais, como a famosa Praia de Alter do Chão, com suas águas cristalinas e areias brancas.
+                </p>
+                <p>
+                    Durante o passeio, você poderá visitar comunidades ribeirinhas, onde é possível aprender mais sobre a cultura local e suas tradições. Além disso, a fauna e flora da região são um espetáculo à parte, com chances de avistar botos, jacarés e uma grande diversidade de aves.
+                </p>
+                <p>
+                    Seja para relaxar em uma praia isolada, pescar ou simplesmente apreciar o pôr do sol sobre o rio, os passeios de barco em Santarém são uma das melhores formas de explorar a Amazônia de forma autêntica e inesquecível.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="menu.js"></script>
+
+    <!-- Google Maps API -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzKoQl660FI26vlTVohbP59wnFPXiIgUk&libraries=places"></script>
+
+    <!-- Scripts do app -->
+    <script src="app.js"></script>
+
+    <!-- Script do tradutor -->
+    <script>
+        window.gtranslateSettings = {
+            default_language: "pt",
+            detect_browser_language: true,
+            languages: [
+                "pt",
+                "fr",
+                "de",
+                "it",
+                "es",
+                "nl",
+                "ja",
+                "zh-TW",
+                "ko",
+                "en",
+            ],
+            wrapper_selector: ".gtranslate_wrapper",
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzKoQl660FI26vlTVohbP59wnFPXiIgUk&loading=async&libraries=places&callback=initMap">
+</script>
+</body>
+
+</html>

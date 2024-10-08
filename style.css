@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 300vh;
+    background-color: #000;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 55px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index: 1000;
+}
+
+header.rolagem {
+    background-color: #fff;
+    padding: 20px 4%;
+}
+
+header i {
+    font-size: 30px;
+    color: #fff;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header.rolagem ul li a {
+    color: #FE775A;
+}
+
+/* Estilos do Submenu */
+header ul li:hover > ul.submenu {
+    display: block;
+}
+
+.submenu {
+    
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu li {
+    
+    display: block;
+    margin: 0;
+}
+
+.submenu li a {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #FE775A;
+    color: #fff;
+}
+
+/* Botão Contato */
+.btn-contato button {
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background-color: #FE775A;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button:hover {
+    background-color: #ff906c;
+}
+
+/* Banner */
+.banner {
+    height: 100vh;
+    background-image: url(imagens/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 4em;
+    color: #fff;
+}
+
+.banner h1 span {
+    color: #FFAE81;
+}
+
+/* Barra de pesquisa e filtros */
+#search-input {
+    width: 60%;
+    padding: 20px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+}
+
+#search-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilo do filtro */
+#filter {
+    padding: 12px;
+    font-size: 18px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 150px; /* Ajuste nas margens */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+#search-input {
+    flex: 1;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+#search-btn {
+    padding: 15px 30px;
+    margin-right: 10px;
+}
+
+#filter {
+    padding: 12px;
+    font-size: 18px; /* Aumentando a fonte do filtro */
+}
+
+/* Espaço entre o banner e a pesquisa */
+.banner + .search-container {
+    margin-top: 50px; /* Adicionando espaço entre o banner e a pesquisa */
+}
+
+
+h2 {
+    color: #eee8e8; /* Cor dos títulos */
+    text-align: center; /* Centraliza os títulos */
+}
+
+.content-container {
+    display: flex; /* Usar flexbox para disposição lado a lado */
+    justify-content: space-between; /* Espaçar o conteúdo */
+    align-items: flex-start; /* Alinhar os itens no início */
+    margin: 20px; /* Margem externa */
+    padding: 20px; /* Preenchimento interno */
+    background-color: white; /* Fundo branco para o conteúdo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.image-container {
+    flex: 1; /* Imagem ocupa 1 parte do espaço */
+    margin-right: 20px; /* Margem à direita das imagens */
+}
+
+.text-container {
+    flex: 2; /* Texto ocupa 2 partes do espaço */
+    color: #333; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    text-align: justify; /* Justificar texto */
+}
+
+.text-container p {
+    margin-bottom: 15px; /* Espaçamento entre parágrafos */
+}
+
+img {
+    max-width: 100%; /* Limita a largura máxima das imagens */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 10px; /* Cantos arredondados nas imagens */
+}
+
+#eventos-locais, #atracoes-culturais, #praias, #passeios-barco {
+    margin: 20px 0; /* Margem entre as seções */
+}
+
+/* Estilos para tablets (largura entre 600px e 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    header {
+        padding: 40px 3%;
+    }
+
+    .banner h1 {
+        font-size: 3em; /* Diminuir tamanho da fonte do banner */
+    }
+
+    .search-container {
+        margin: 20px 50px; /* Ajustar margem para tablets */
+        flex-direction: column; /* Colocar os itens em coluna */
+    }
+
+    #search-input {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 15px;
+    }
+
+    #search-btn, #filter {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .content-container {
+        flex-direction: column; /* Alterar para coluna */
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .image-container {
+        margin-bottom: 15px; /* Adicionar espaçamento abaixo da imagem */
+    }
+
+    .text-container {
+        font-size: 16px; /* Ajustar tamanho da fonte */
+    }
+}
+
+/* Estilos para celulares (largura até 600px) */
+@media (max-width: 600px) {
+    header ul li {
+        margin: 0 10px;
+    }
+
+    .banner h1 {
+        font-size: 2.5em; /* Ajustar tamanho da fonte para dispositivos móveis */
+    }
+
+    .banner h1 span {
+        font-size: 1.2em;
+    }
+
+    .search-container {
+        margin: 20px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    #search-input {
+        width: 100%;
+        margin-bottom: 10px; /* Espaçamento abaixo do input */
+        border-radius: 15px;
+    }
+
+    #search-btn, #filter {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .image-container, .text-container {
+        margin-right: 0;
+    }
+
+    .text-container {
+        font-size: 14px; /* Diminuir tamanho da fonte */
+    }
+
+    img {
+        width: 100%; /* Garantir que a imagem ocupe 100% da largura disponível */
+    }
+
+    .btn-contato button {
+        width: 100%; /* Botão ocupa 100% da largura */
+    }
+}
+
